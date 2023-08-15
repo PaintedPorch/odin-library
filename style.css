@@ -1,5 +1,5 @@
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     height: clamp(400px, 100%, 2000px);
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr .75fr 5fr 1fr;
     overflow-x: hidden;
 }
 
@@ -31,8 +31,34 @@ body {
     font-weight: 600;
 }
 
-#shelf {
+#buttonbar {
     grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(255, 248, 240);
+    min-height: 50px;
+}
+
+#addbook {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: rgb(126, 63, 21);
+    color: white;
+    font-weight: 400;
+}
+
+#addbook:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#shelf {
+    grid-row: 3 / 4;
     overflow: visible;
     background-color: rgb(255, 248, 240);
     display: grid;
@@ -46,17 +72,54 @@ body {
     align-items: center;
 }
 
-.sample {
-    background-color: red;
+.bookcover {
+    background-image: url(./images/book-cover.jpg);
+    background-size: 100%;
     outline: 2px solid black;
     min-height: 250px;
     min-width: 175px;
-    max-width: 325px;
+    max-width: 175px;
     max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.booktitle {
+    width: 60%;
+    height: 60px;
+    margin-top: 20%;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.bookauthor, .bookpages, .checklabel {
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+#readornot {
+    accent-color: white;
+}
+
+.readcheckdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer {
-    grid-row: 3 / -1;
+    grid-row: 4 / -1;
     background-image: url(./images/wood.jpg);
     min-height: 125px;
 }
