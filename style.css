@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url(./images/wood.jpg);
-    min-height: 100px;
+    min-height: 125px;
 }
 
 #title {
@@ -36,23 +36,27 @@ body {
     overflow: visible;
     background-color: rgb(255, 248, 240);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     padding: 25px;
-    grid-auto-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
 }
 
 .sample {
     background-color: red;
     outline: 2px solid black;
-    min-height: 100px;
-    min-width: 100px;
+    min-height: 250px;
+    min-width: 175px;
+    max-width: 325px;
+    max-height: 400px;
 }
 
 #footer {
     grid-row: 3 / -1;
     background-image: url(./images/wood.jpg);
-    min-height: 100px;
+    min-height: 125px;
 }
