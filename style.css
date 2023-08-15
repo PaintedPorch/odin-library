@@ -89,11 +89,11 @@ button:hover {
 
 .booktitle {
     width: 60%;
-    height: 60px;
+    height: 65px;
     margin-top: 20%;
     color: rgb(233, 233, 233);
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     display: flex;
     justify-content: center;
     align-items: center;
