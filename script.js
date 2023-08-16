@@ -55,7 +55,7 @@ function deleteBook() {
 
         let bookTitle = bookArray[i].title;
 
-        if (bookTitle == bookName) {
+        if (bookTitle.toLowerCase() == bookName.toLowerCase()) {
             let bookDiv = itemList[i];
             bookDiv.remove();
         }
