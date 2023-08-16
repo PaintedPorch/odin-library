@@ -1,0 +1,8 @@
+
+Look: An upper bar with wood texture and "The Painted Library"
+title, an (light brown) middle (about 70% of the height) width the book items 
+(expands if it goes over the single page height, thus creating scrolling), 
+and a bottom with a wood texture to finish the "book shelf". 
+The books should be cards that appear like leather and when you click 
+them they open up to a white with a leather left side 
+(creating the idea of a book with a hardcover)
