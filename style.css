@@ -93,9 +93,7 @@ button:hover {
     gap: 5px;
 }
 
-.booktitle {* {
-    /* outline: 1px solid red; */
-}
+.booktitle { 
     width: 60%;
     height: 65px;
     margin-top: 20%;
