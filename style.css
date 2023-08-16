@@ -19,6 +19,7 @@ body {
     align-items: center;
     background-image: url(./images/wood.jpg);
     min-height: 125px;
+    background-size: 100%;
 }
 
 #title {
@@ -131,6 +132,7 @@ button:hover {
     grid-row: 4 / -1;
     background-image: url(./images/wood.jpg);
     min-height: 125px;
+    background-size: 100%;
 }
 
 @media (max-width: 400px) {
