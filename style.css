@@ -39,7 +39,6 @@ body {
 }
 
 #addbook, #removebook {
-    padding: 8px 12px;
     border-radius: 5px;
     background-color: rgb(126, 63, 21);
     font-weight: 400;
@@ -47,11 +46,12 @@ body {
 
 #addbook {
     color: white;
+    padding: 13px 27px;
 }
 
 #removebook {
-    font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: white;
+    padding: 13px 13px;
 }
 
 #addbook:hover, #removebook:hover {
@@ -145,8 +145,11 @@ button:hover {
     #buttonbar {
         gap: 5%;
     }
-    #addbook, #removebook {
-        padding: 4px 6px;
+    #addbook {
+        padding: 10px 20px;
+    }
+    #removebook {
+        padding: 10px 6px;
     }
 }
 @media (max-height: 600px) {
