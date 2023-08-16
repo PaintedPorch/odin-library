@@ -1,7 +1,3 @@
-* {
-    /* outline: 1px solid red; */
-}
-
 body {
     height: 100vh;
     width: 100vw;
@@ -38,17 +34,26 @@ body {
     align-items: flex-end;
     background-color: rgb(255, 248, 240);
     min-height: 50px;
+    gap: 3%;
 }
 
-#addbook {
+#addbook, #removebook {
     padding: 8px 12px;
     border-radius: 5px;
     background-color: rgb(126, 63, 21);
-    color: white;
     font-weight: 400;
 }
 
-#addbook:hover {
+#addbook {
+    color: white;
+}
+
+#removebook {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#addbook:hover, #removebook:hover {
     transform: scale(1.05);
     transition: .2s;
 }
@@ -64,7 +69,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    gap: booktitle25px;
     padding: 25px;
     grid-auto-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: repeat(auto-fit, minmax(200px, 1fr));
@@ -87,13 +92,15 @@ button:hover {
     gap: 5px;
 }
 
-.booktitle {
+.booktitle {* {
+    /* outline: 1px solid red; */
+}
     width: 60%;
     height: 65px;
     margin-top: 20%;
     color: rgb(233, 233, 233);
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,10 +123,37 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 30%;
 }
 
 #footer {
     grid-row: 4 / -1;
     background-image: url(./images/wood.jpg);
     min-height: 125px;
+}
+
+@media (max-width: 400px) {
+    #title {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 275px) {
+    #title {
+        font-size: 1.4rem;
+    }
+    #buttonbar {
+        gap: 5%;
+    }
+    #addbook, #removebook {
+        padding: 4px 6px;
+    }
+}
+@media (max-height: 600px) {
+    #titlebar {
+        min-height: 100px;
+    }
+    #footer {
+        min-height: 100px;
+    }
 }
