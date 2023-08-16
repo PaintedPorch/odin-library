@@ -132,7 +132,7 @@ button:hover {
     grid-row: 4 / -1;
     background-image: url(./images/wood.jpg);
     min-height: 125px;
-    background-size: 50%;
+    background-size: 33.3333%;
 }
 
 @media (max-width: 400px) {
