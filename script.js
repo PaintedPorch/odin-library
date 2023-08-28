@@ -4,13 +4,15 @@ const noBookBtn = document.getElementById("removebook");
 
 let bookArray = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    } 
 
-    this.info = function() {
+    info() {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
     }
 }
@@ -30,13 +32,24 @@ function addBookToLibrary() {
 
     let item = document.createElement("div");
     item.classList.add("bookcover");
-    item.innerHTML = `<p class="booktitle">${bookArray[index].title}</p>
-                    <p class="bookauthor">${bookArray[index].author}</p>
-                    <p class="bookpages">${bookArray[index].pages} Pages</p>
-                    <div class="readcheckdiv">
-                        <label class="checklabel" for="readornot">Read:</label>
-                        <input type="checkbox" id="readornot">
-                    </div>`
+    if (book.title != "") {
+        item.innerHTML = `<p class="booktitle">${bookArray[index].title}</p>
+                        <p class="bookauthor">${bookArray[index].author}</p>
+                        <p class="bookpages">${bookArray[index].pages} Pages</p>
+                        <div class="readcheckdiv">
+                            <label class="checklabel" for="readornot">Read:</label>
+                            <input type="checkbox" id="readornot">
+                        </div>`
+    }
+    else {
+        item.innerHTML = `<p class="booktitle">Book of The Unknown</p>
+                        <p class="bookauthor">Lord Odin</p>
+                        <p class="bookpages">? Pages</p>
+                        <div class="readcheckdiv">
+                            <label class="checklabel" for="readornot">Read:</label>
+                            <input type="checkbox" id="readornot">
+                        </div>`
+    }
 
     itemList.push(item);
     shelf.appendChild(item);
